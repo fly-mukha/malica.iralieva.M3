@@ -90,13 +90,13 @@ class Application {
         note.remove();
     }
 
-    dragAndDrop(e) {
+    dragAndDrop() {
         function handleMouseMove(e) {
             note.style.left = (e.pageX - 20) + 'px';
             note.style.top = (e.pageY - 20) + 'px';
         }
 
-        const handleMouseUp = (e) => {
+        const handleMouseUp = () => {
             document.removeEventListener('mousemove', handleMouseMove);
             document.removeEventListener('mouseup', handleMouseUp);
         
