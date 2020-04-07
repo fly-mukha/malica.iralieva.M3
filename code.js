@@ -92,9 +92,8 @@ class Application {
 
     dragAndDrop(e) {
         function handleMouseMove(e) {
-            const containerRect = container.getBoundingClientRect();
-            note.style.left = (e.pageX - containerRect.left - 10) + 'px';
-            note.style.top = (e.pageY - containerRect.top - 10) + 'px';
+            note.style.left = (e.pageX - 20) + 'px';
+            note.style.top = (e.pageY - 20) + 'px';
         }
 
         const handleMouseUp = (e) => {
@@ -108,6 +107,7 @@ class Application {
                 noteElementsArray.push(item);
             });
 
+            //сортируем записки по значению Y
             noteElementsArray.sort((a, b) => {
                 const firstRect = a.getBoundingClientRect();
                 console.log('a', a, firstRect);
@@ -126,6 +126,7 @@ class Application {
             })
         }
 
+        //меняем способ позиционирования
         const note = this.parentElement;
         note.classList.add('dragging');
 
