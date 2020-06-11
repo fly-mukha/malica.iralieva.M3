@@ -113,7 +113,7 @@ input:focus {
     outline: none;
 }
 
-.delete-button {
+.delete-button { 
     width: 22px;
     height: 22px;
 
@@ -150,6 +150,7 @@ input:focus {
 
     background: #9953F1;
     border-radius: 71px;
+    border: none;
 
     font-size: 14px;
     color: white;
